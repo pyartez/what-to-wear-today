@@ -14,59 +14,15 @@ struct ContentView: View {
                 Text("Rugeley")
                     .font(.title)
                     .bold()
-                VStack(spacing: 16) {
-                    HStack() {
-                        Image("advicons.umbrella")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 50, height: nil, alignment: .center)
-                            
-                        VStack(alignment: .leading) {
-                            Text("Title")
-                                .font(.headline)
-                            Text("Sub Title")
-                                .font(.subheadline)
-                                .foregroundColor(Color("colors.subTitle"))
-                        }
-                        Spacer()
-                    }
-                    
-                    HStack() {
-                        Image("advicons.coat")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 50, height: nil, alignment: .center)
-                            
-                        VStack(alignment: .leading) {
-                            Text("Title")
-                                .font(.headline)
-                            Text("Sub Title")
-                                .font(.subheadline)
-                                .foregroundColor(Color("colors.subTitle"))
-                        }
-                        Spacer()
-                    }
-                    
-                    HStack() {
-                        Image("advicons.sunglasses")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 50, height: nil, alignment: .center)
-                            
-                        VStack(alignment: .leading) {
-                            Text("Title")
-                                .font(.headline)
-                            Text("Sub Title")
-                                .font(.subheadline)
-                                .foregroundColor(Color("colors.subTitle"))
-                        }
-                        Spacer()
-                    }
-                }
-                .groupStyle()
+                
+                AdviconListView(items: [
+                    AdviconListItem(
+                        id: UUID(),
+                        icon: "advicons.umbrella",
+                        title: "Take your umbrella!",
+                        subTitle: "Looks like it is going to rain today"
+                    )
+                ])
                 
                 VStack(spacing: 0) {
                     VStack(spacing: 16) {
@@ -84,10 +40,14 @@ struct ContentView: View {
                             Text("10 c")
                                 .font(.headline)
                                 .bold()
+                                .foregroundColor(Color.black)
                                 .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                                 .background(Color.green)
                                 .cornerRadius(50)
-                            Spacer()
+                            
+                            ProgressView(value: 50.0, total: 100.0)
+                                .accentColor(Color.green)
+                                .scaleEffect(x: 1.0, y: 2.0, anchor: .center)
                         }
                     }.groupStyle()
                     
@@ -115,10 +75,14 @@ struct ContentView: View {
                             Text("10 c")
                                 .font(.headline)
                                 .bold()
+                                .foregroundColor(Color.black)
                                 .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                                 .background(Color.green)
                                 .cornerRadius(50)
-                            Spacer()
+                            
+                            ProgressView(value: 50.0, total: 100.0)
+                                .accentColor(Color.green)
+                                .scaleEffect(x: 1.0, y: 2.0, anchor: .center)
                         }
                     }.groupStyle()
                     
@@ -146,10 +110,14 @@ struct ContentView: View {
                             Text("10 c")
                                 .font(.headline)
                                 .bold()
+                                .foregroundColor(Color.black)
                                 .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                                 .background(Color.green)
                                 .cornerRadius(50)
-                            Spacer()
+                            
+                            ProgressView(value: 50.0, total: 100.0)
+                                .accentColor(Color.green)
+                                .scaleEffect(x: 1.0, y: 2.0, anchor: .center)
                         }
                     }.groupStyle()
                 }
@@ -162,6 +130,7 @@ struct ContentView: View {
               alignment: .topLeading
             )
             .padding()
+            .animation(.default)
         })
         .foregroundColor(Color.white)
         .background(Color("colors.background"))

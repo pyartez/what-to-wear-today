@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552D06E02663F41C00C7171A /* AdviconListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D06DF2663F41C00C7171A /* AdviconListView.swift */; };
+		552D06E22663F8AD00C7171A /* AdviconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D06E12663F8AD00C7171A /* AdviconView.swift */; };
 		558CFBF92654E60400C20BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558CFBF82654E60400C20BF9 /* AppDelegate.swift */; };
 		558CFBFB2654E60400C20BF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558CFBFA2654E60400C20BF9 /* SceneDelegate.swift */; };
 		558CFBFD2654E60400C20BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558CFBFC2654E60400C20BF9 /* ContentView.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		552D06DF2663F41C00C7171A /* AdviconListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviconListView.swift; sourceTree = "<group>"; };
+		552D06E12663F8AD00C7171A /* AdviconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviconView.swift; sourceTree = "<group>"; };
 		558CFBF52654E60400C20BF9 /* what-to-wear-today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "what-to-wear-today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558CFBF82654E60400C20BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		558CFBFA2654E60400C20BF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552D06E326640D3E00C7171A /* Advicons */ = {
+			isa = PBXGroup;
+			children = (
+				552D06DF2663F41C00C7171A /* AdviconListView.swift */,
+				552D06E12663F8AD00C7171A /* AdviconView.swift */,
+			);
+			path = Advicons;
+			sourceTree = "<group>";
+		};
 		558CFBEC2654E60400C20BF9 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 		558CFBF72654E60400C20BF9 /* what-to-wear-today */ = {
 			isa = PBXGroup;
 			children = (
+				552D06E326640D3E00C7171A /* Advicons */,
 				558CFBF82654E60400C20BF9 /* AppDelegate.swift */,
 				558CFBFA2654E60400C20BF9 /* SceneDelegate.swift */,
 				558CFBFC2654E60400C20BF9 /* ContentView.swift */,
@@ -269,6 +283,8 @@
 				558CFBF92654E60400C20BF9 /* AppDelegate.swift in Sources */,
 				558CFBFB2654E60400C20BF9 /* SceneDelegate.swift in Sources */,
 				558CFBFD2654E60400C20BF9 /* ContentView.swift in Sources */,
+				552D06E02663F41C00C7171A /* AdviconListView.swift in Sources */,
+				552D06E22663F8AD00C7171A /* AdviconView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
