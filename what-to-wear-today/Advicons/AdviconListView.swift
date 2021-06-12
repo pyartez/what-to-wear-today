@@ -19,7 +19,7 @@ struct AdviconListView: View {
     
     var body: some View {
         LazyVStack(spacing: 16) {
-            ForEach(items, id: \.id) { item in
+            ForEach(items) { item in
                 AdviconView(item: item)
             }
         }

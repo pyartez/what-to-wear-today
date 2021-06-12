@@ -24,103 +24,20 @@ struct ContentView: View {
                     )
                 ])
                 
-                VStack(spacing: 0) {
-                    VStack(spacing: 16) {
-                        HStack(spacing: 16) {
-                            Text("11:00")
-                                .font(.title3)
-                                .bold()
-                            
-                            Image(systemName: "cloud.sun.rain.fill")
-                                .renderingMode(.original)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: nil, height: 30, alignment: .center)
-                            
-                            Text("10 c")
-                                .font(.headline)
-                                .bold()
-                                .foregroundColor(Color.black)
-                                .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-                                .background(Color.green)
-                                .cornerRadius(50)
-                            
-                            ProgressView(value: 50.0, total: 100.0)
-                                .accentColor(Color.green)
-                                .scaleEffect(x: 1.0, y: 2.0, anchor: .center)
-                        }
-                    }.groupStyle()
-                    
-                    HStack {
-                        Spacer()
-                            .frame(maxWidth: 40)
-                        Divider()
-                            .frame(maxWidth: 5)
-                            .background(Color.gray)
-                        Spacer()
-                    }.frame(maxHeight: 10)
-                    
-                    VStack(spacing: 16) {
-                        HStack(spacing: 16) {
-                            Text("12:00")
-                                .font(.title3)
-                                .bold()
-                            
-                            Image(systemName: "cloud.sun.rain.fill")
-                                .renderingMode(.original)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: nil, height: 30, alignment: .center)
-                            
-                            Text("10 c")
-                                .font(.headline)
-                                .bold()
-                                .foregroundColor(Color.black)
-                                .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-                                .background(Color.green)
-                                .cornerRadius(50)
-                            
-                            ProgressView(value: 50.0, total: 100.0)
-                                .accentColor(Color.green)
-                                .scaleEffect(x: 1.0, y: 2.0, anchor: .center)
-                        }
-                    }.groupStyle()
-                    
-                    HStack {
-                        Spacer()
-                            .frame(maxWidth: 40)
-                        Divider()
-                            .frame(maxWidth: 5)
-                            .background(Color.gray)
-                        Spacer()
-                    }.frame(maxHeight: 10)
-                    
-                    VStack(spacing: 16) {
-                        HStack(spacing: 16) {
-                            Text("13:00")
-                                .font(.title3)
-                                .bold()
-                            
-                            Image(systemName: "cloud.sun.rain.fill")
-                                .renderingMode(.original)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: nil, height: 30, alignment: .center)
-                            
-                            Text("10 c")
-                                .font(.headline)
-                                .bold()
-                                .foregroundColor(Color.black)
-                                .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-                                .background(Color.green)
-                                .cornerRadius(50)
-                            
-                            ProgressView(value: 50.0, total: 100.0)
-                                .accentColor(Color.green)
-                                .scaleEffect(x: 1.0, y: 2.0, anchor: .center)
-                        }
-                    }.groupStyle()
-                }
+                HourlyTimelineView(items: [
+                    HourlyTimelineViewModel(
+                        model: HourlyTimeItemViewModel(
+                            id: UUID(),
+                            time: "11:00",
+                            icon: "cloud.sun.rain.fill",
+                            temp: "10C",
+                            progressValue: 20,
+                            progressMax: 50
+                        ),
+                        separator: false
+                    )
+                ])
+                
             }
             .frame(
               minWidth: 0,
