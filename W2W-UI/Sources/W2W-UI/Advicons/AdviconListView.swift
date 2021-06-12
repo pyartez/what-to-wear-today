@@ -6,18 +6,16 @@
 //
 
 import SwiftUI
+import W2W_Presenter
 
-struct AdviconListItem: Identifiable {
-    let id: UUID
-    let icon: String
-    let title: String
-    let subTitle: String
-}
-
-struct AdviconListView: View {
-    let items: [AdviconListItem]
+public struct AdviconListView: View {
+    public let items: [AdviconListItem]
     
-    var body: some View {
+    public init(items: [AdviconListItem]) {
+        self.items = items
+    }
+    
+    public var body: some View {
         LazyVStack(spacing: 16) {
             ForEach(items) { item in
                 AdviconView(item: item)

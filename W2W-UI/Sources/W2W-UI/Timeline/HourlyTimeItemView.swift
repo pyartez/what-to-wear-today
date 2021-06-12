@@ -6,20 +6,16 @@
 //
 
 import SwiftUI
+import W2W_Presenter
 
-struct HourlyTimeItemViewModel: Identifiable {
-    let id: UUID
-    let time: String
-    let icon: String
-    let temp: String
-    let progressValue: Float
-    let progressMax: Float
-}
-
-struct HourlyTimeItemView: View {
-    let model: HourlyTimeItemViewModel
+public struct HourlyTimeItemView: View {
+    public let model: HourlyTimeItemViewModel
     
-    var body: some View {
+    public init(model: HourlyTimeItemViewModel) {
+        self.model = model
+    }
+    
+    public var body: some View {
         HStack(spacing: 16) {
             Text(model.time)
                 .font(.title3)

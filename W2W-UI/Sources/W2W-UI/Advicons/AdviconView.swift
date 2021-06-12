@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import W2W_Presenter
 
-struct AdviconView: View {
-    let item: AdviconListItem
+public struct AdviconView: View {
+    public let item: AdviconListItem
     
-    var body: some View {
+    public init(item: AdviconListItem) {
+        self.item = item
+    }
+    
+    public var body: some View {
         HStack() {
             Image(item.icon)
                 .renderingMode(.original)

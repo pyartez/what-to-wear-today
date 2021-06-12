@@ -6,16 +6,16 @@
 //
 
 import SwiftUI
+import W2W_Presenter
 
-struct HourlyTimelineViewModel {
-    let model: HourlyTimeItemViewModel
-    let separator: Bool
-}
-
-struct HourlyTimelineView: View {
-    let items: [HourlyTimelineViewModel]
+public struct HourlyTimelineView: View {
+    public let items: [HourlyTimelineViewModel]
     
-    var body: some View {
+    public init(items: [HourlyTimelineViewModel]) {
+        self.items = items
+    }
+    
+    public var body: some View {
         VStack(spacing: 0) {
             ForEach(items, id: \.model.id) { item in
                 HourlyTimeItemView(model: item.model)

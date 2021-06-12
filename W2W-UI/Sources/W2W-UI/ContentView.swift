@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import W2W_Presenter
 
-struct ContentView: View {
-    var body: some View {
+public struct ContentView: View {
+    @EnvironmentObject var presenter: HomeScreenPresenter
+    
+    public init() {}
+    
+    public var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
             VStack(alignment: .leading, spacing: 16) {
                 Text("Rugeley")
@@ -57,13 +62,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-extension View {
-    func groupStyle() -> some View {
-        self.padding()
-            .background(Color("colors.groupBg"))
-            .cornerRadius(9.0)
     }
 }
