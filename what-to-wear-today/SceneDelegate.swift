@@ -7,7 +7,9 @@
 
 import UIKit
 import SwiftUI
-import W2W_UI
+import UI
+import Combine
+import PresenterAbstraction
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,7 +22,53 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
+        let icons = [
+            AdviconListItem(
+                id: UUID(),
+                icon: "advicons.umbrella",
+                title: "This is a test item",
+                subTitle: "This is a test item subtitle"
+            )
+        ]
+        
+        let viewModel = HomeScreenViewModel(
+            title: "Rugeley",
+            advicons: icons,
+            hourlyTimeline: []
+        )
+        let stateProvider2 = Combine.Just<HomeScreenState>(.ready(viewModel)).setFailureType(to: Error.self)
+        let presenter2 = HomeScreenObservableObject(stateProvider: stateProvider2.eraseToAnyPublisher())
+        
+        let palette = Palette(
+            primary: Color("colors.groupBg"),
+            secondary: Color("colors.groupBg"),
+            background: Color("colors.background"),
+            surface: Color("colors.groupBg"),
+            onPrimary: Color.white,
+            onSecondary: Color.white,
+            onSurface: Color.white,
+            onSurfaceSecondary: Color("colors.subTitle"),
+            error: Color.red
+        )
+        
+        let typography = Typography(
+            h1: .largeTitle,
+            h2: .title,
+            h3: .title2,
+            h4: .title3,
+            subTitle1: .headline,
+            subTitle2: .subheadline,
+            body: .body,
+            caption: .caption,
+            button: .body,
+            overline: .footnote
+        )
+        
+        let theme = Theme(color: palette, font: typography, bundle: .main)
+        
         let contentView = ContentView()
+            .environmentObject(presenter2)
+            .environment(\.theme, theme)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

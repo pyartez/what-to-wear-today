@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5507B4A82674838900018871 /* W2W-UI in Frameworks */ = {isa = PBXBuildFile; productRef = 5507B4A72674838900018871 /* W2W-UI */; };
-		5507B4AB2674ECA900018871 /* W2W-Presenter in Frameworks */ = {isa = PBXBuildFile; productRef = 5507B4AA2674ECA900018871 /* W2W-Presenter */; };
 		558CFBF92654E60400C20BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558CFBF82654E60400C20BF9 /* AppDelegate.swift */; };
 		558CFBFB2654E60400C20BF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558CFBFA2654E60400C20BF9 /* SceneDelegate.swift */; };
 		558CFBFF2654E60500C20BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558CFBFE2654E60500C20BF9 /* Assets.xcassets */; };
@@ -16,6 +14,9 @@
 		558CFC052654E60500C20BF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558CFC032654E60500C20BF9 /* LaunchScreen.storyboard */; };
 		558CFC102654E60500C20BF9 /* what_to_wear_todayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558CFC0F2654E60500C20BF9 /* what_to_wear_todayTests.swift */; };
 		558CFC1B2654E60500C20BF9 /* what_to_wear_todayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558CFC1A2654E60500C20BF9 /* what_to_wear_todayUITests.swift */; };
+		55B16F2726CF801B00F4AF9F /* Presenter in Frameworks */ = {isa = PBXBuildFile; productRef = 55B16F2626CF801B00F4AF9F /* Presenter */; };
+		55B16F5926CF80C900F4AF9F /* UI in Frameworks */ = {isa = PBXBuildFile; productRef = 55B16F5826CF80C900F4AF9F /* UI */; };
+		55B16F5C26CF815C00F4AF9F /* PresenterAbstraction in Frameworks */ = {isa = PBXBuildFile; productRef = 55B16F5B26CF815C00F4AF9F /* PresenterAbstraction */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5507B4A52674836A00018871 /* W2W-UI */ = {isa = PBXFileReference; lastKnownFileType = text; path = "W2W-UI"; sourceTree = SOURCE_ROOT; };
-		5507B4A92674CA7000018871 /* W2W-Presenter */ = {isa = PBXFileReference; lastKnownFileType = text; path = "W2W-Presenter"; sourceTree = SOURCE_ROOT; };
-		5507B4AC2674EDB300018871 /* W2W-Presenter-Imp */ = {isa = PBXFileReference; lastKnownFileType = text; path = "W2W-Presenter-Imp"; sourceTree = SOURCE_ROOT; };
 		558CFBF52654E60400C20BF9 /* what-to-wear-today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "what-to-wear-today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558CFBF82654E60400C20BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		558CFBFA2654E60400C20BF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +50,9 @@
 		558CFC162654E60500C20BF9 /* what-to-wear-todayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "what-to-wear-todayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558CFC1A2654E60500C20BF9 /* what_to_wear_todayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = what_to_wear_todayUITests.swift; sourceTree = "<group>"; };
 		558CFC1C2654E60500C20BF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B16F2126CF7FBD00F4AF9F /* Presenter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Presenter; sourceTree = "<group>"; };
+		55B16F5726CF80C100F4AF9F /* UI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UI; sourceTree = "<group>"; };
+		55B16F5A26CF814600F4AF9F /* PresenterAbstraction */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PresenterAbstraction; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5507B4AB2674ECA900018871 /* W2W-Presenter in Frameworks */,
-				5507B4A82674838900018871 /* W2W-UI in Frameworks */,
+				55B16F5926CF80C900F4AF9F /* UI in Frameworks */,
+				55B16F2726CF801B00F4AF9F /* Presenter in Frameworks */,
+				55B16F5C26CF815C00F4AF9F /* PresenterAbstraction in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,9 +114,9 @@
 		558CFBF72654E60400C20BF9 /* what-to-wear-today */ = {
 			isa = PBXGroup;
 			children = (
-				5507B4A52674836A00018871 /* W2W-UI */,
-				5507B4A92674CA7000018871 /* W2W-Presenter */,
-				5507B4AC2674EDB300018871 /* W2W-Presenter-Imp */,
+				55B16F5726CF80C100F4AF9F /* UI */,
+				55B16F5A26CF814600F4AF9F /* PresenterAbstraction */,
+				55B16F2126CF7FBD00F4AF9F /* Presenter */,
 				558CFBF82654E60400C20BF9 /* AppDelegate.swift */,
 				558CFBFA2654E60400C20BF9 /* SceneDelegate.swift */,
 				558CFBFE2654E60500C20BF9 /* Assets.xcassets */,
@@ -168,8 +170,9 @@
 			);
 			name = "what-to-wear-today";
 			packageProductDependencies = (
-				5507B4A72674838900018871 /* W2W-UI */,
-				5507B4AA2674ECA900018871 /* W2W-Presenter */,
+				55B16F2626CF801B00F4AF9F /* Presenter */,
+				55B16F5826CF80C900F4AF9F /* UI */,
+				55B16F5B26CF815C00F4AF9F /* PresenterAbstraction */,
 			);
 			productName = "what-to-wear-today";
 			productReference = 558CFBF52654E60400C20BF9 /* what-to-wear-today.app */;
@@ -617,13 +620,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5507B4A72674838900018871 /* W2W-UI */ = {
+		55B16F2626CF801B00F4AF9F /* Presenter */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = "W2W-UI";
+			productName = Presenter;
 		};
-		5507B4AA2674ECA900018871 /* W2W-Presenter */ = {
+		55B16F5826CF80C900F4AF9F /* UI */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = "W2W-Presenter";
+			productName = UI;
+		};
+		55B16F5B26CF815C00F4AF9F /* PresenterAbstraction */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresenterAbstraction;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
