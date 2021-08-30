@@ -37,7 +37,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             hourlyTimeline: []
         )
         let stateProvider2 = Combine.Just<HomeScreenState>(.ready(viewModel)).setFailureType(to: Error.self)
-        let presenter2 = HomeScreenObservableObject(stateProvider: stateProvider2.eraseToAnyPublisher())
+        let mockPresenter = MockHomePresenter(state: stateProvider2.eraseToAnyPublisher())
+        let presenter2 = HomeScreenObservableObject(presenter: mockPresenter)
         
         let palette = Palette(
             primary: Color("colors.groupBg"),

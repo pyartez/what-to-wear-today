@@ -73,17 +73,10 @@ public struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let stateProvider = Combine.Just<HomeScreenState>(.loading).setFailureType(to: Error.self)
-        let presenter = HomeScreenObservableObject(stateProvider: stateProvider.eraseToAnyPublisher())
-        ContentView()
-            .environmentObject(presenter)
-        
-        
-        
         let icons = [
             AdviconListItem(
                 id: UUID(),
-                icon: "testImage",
+                icon: "advicons.umbrella",
                 title: "This is a test item",
                 subTitle: "This is a test item subtitle"
             )
@@ -95,8 +88,27 @@ struct ContentView_Previews: PreviewProvider {
             hourlyTimeline: []
         )
         let stateProvider2 = Combine.Just<HomeScreenState>(.ready(viewModel)).setFailureType(to: Error.self)
-        let presenter2 = HomeScreenObservableObject(stateProvider: stateProvider2.eraseToAnyPublisher())
+        let mockPresenter = MockHomePresenter(state: stateProvider2.eraseToAnyPublisher())
+        let presenter2 = HomeScreenObservableObject(presenter: mockPresenter)
+        
         ContentView()
             .environmentObject(presenter2)
+
     }
 }
+
+#if DEBUG
+public struct MockHomePresenter: HomePresenter {
+    public func start() {}
+    
+    public var state: AnyPublisher<HomeScreenState, Error> {
+        return _state
+    }
+    
+    private let _state: AnyPublisher<HomeScreenState, Error>
+    
+    public init(state: AnyPublisher<HomeScreenState, Error>) {
+        self._state = state
+    }
+}
+#endif

@@ -18,11 +18,20 @@ public class HomeScreenObservableObject: ObservableObject {
     public init(presenter: HomePresenter) {
         self.presenter = presenter
         
-        
+        cancellable = presenter.state.sink(receiveCompletion: { [weak self] completion in
+            switch completion {
+            case .failure:
+                self?.state = .error
+            case .finished:
+                break
+            }
+        }, receiveValue: { [weak self] state in
+            self?.state = state
+        })
     }
     
     public func start() {
-        
+        presenter.start()
     }
     
     public func stop() {

@@ -26,5 +26,5 @@ public struct HomeScreenViewModel {
 
 public protocol HomePresenter {
     var state: AnyPublisher<HomeScreenState, Error> { get }
-    func load()
+    func start()
 }
