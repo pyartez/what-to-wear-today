@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5547CB1226E0AAE800B3AF7E /* UseCaseAbstraction in Frameworks */ = {isa = PBXBuildFile; productRef = 5547CB1126E0AAE800B3AF7E /* UseCaseAbstraction */; };
+		5547CB1426E0AAEF00B3AF7E /* UseCase in Frameworks */ = {isa = PBXBuildFile; productRef = 5547CB1326E0AAEF00B3AF7E /* UseCase */; };
+		5547CB1626E0AAF500B3AF7E /* RepoAbstraction in Frameworks */ = {isa = PBXBuildFile; productRef = 5547CB1526E0AAF500B3AF7E /* RepoAbstraction */; };
+		5547CB1826E0AAF900B3AF7E /* Repo in Frameworks */ = {isa = PBXBuildFile; productRef = 5547CB1726E0AAF900B3AF7E /* Repo */; };
 		558CFBF92654E60400C20BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558CFBF82654E60400C20BF9 /* AppDelegate.swift */; };
 		558CFBFB2654E60400C20BF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558CFBFA2654E60400C20BF9 /* SceneDelegate.swift */; };
 		558CFBFF2654E60500C20BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558CFBFE2654E60500C20BF9 /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5586566B26DCD68A006F57C1 /* UseCaseAbstraction */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UseCaseAbstraction; sourceTree = "<group>"; };
+		5586566C26DCD6BF006F57C1 /* UseCase */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UseCase; sourceTree = "<group>"; };
+		5586566D26DCD6DD006F57C1 /* RepoAbstraction */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RepoAbstraction; sourceTree = "<group>"; };
+		5586566E26DCD711006F57C1 /* Repo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Repo; sourceTree = "<group>"; };
 		558CFBF52654E60400C20BF9 /* what-to-wear-today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "what-to-wear-today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558CFBF82654E60400C20BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		558CFBFA2654E60400C20BF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +69,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				55B16F5926CF80C900F4AF9F /* UI in Frameworks */,
+				5547CB1826E0AAF900B3AF7E /* Repo in Frameworks */,
+				5547CB1226E0AAE800B3AF7E /* UseCaseAbstraction in Frameworks */,
 				55B16F2726CF801B00F4AF9F /* Presenter in Frameworks */,
 				55B16F5C26CF815C00F4AF9F /* PresenterAbstraction in Frameworks */,
+				5547CB1426E0AAEF00B3AF7E /* UseCase in Frameworks */,
+				5547CB1626E0AAF500B3AF7E /* RepoAbstraction in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +129,10 @@
 				55B16F5726CF80C100F4AF9F /* UI */,
 				55B16F5A26CF814600F4AF9F /* PresenterAbstraction */,
 				55B16F2126CF7FBD00F4AF9F /* Presenter */,
+				5586566B26DCD68A006F57C1 /* UseCaseAbstraction */,
+				5586566C26DCD6BF006F57C1 /* UseCase */,
+				5586566D26DCD6DD006F57C1 /* RepoAbstraction */,
+				5586566E26DCD711006F57C1 /* Repo */,
 				558CFBF82654E60400C20BF9 /* AppDelegate.swift */,
 				558CFBFA2654E60400C20BF9 /* SceneDelegate.swift */,
 				558CFBFE2654E60500C20BF9 /* Assets.xcassets */,
@@ -173,6 +189,10 @@
 				55B16F2626CF801B00F4AF9F /* Presenter */,
 				55B16F5826CF80C900F4AF9F /* UI */,
 				55B16F5B26CF815C00F4AF9F /* PresenterAbstraction */,
+				5547CB1126E0AAE800B3AF7E /* UseCaseAbstraction */,
+				5547CB1326E0AAEF00B3AF7E /* UseCase */,
+				5547CB1526E0AAF500B3AF7E /* RepoAbstraction */,
+				5547CB1726E0AAF900B3AF7E /* Repo */,
 			);
 			productName = "what-to-wear-today";
 			productReference = 558CFBF52654E60400C20BF9 /* what-to-wear-today.app */;
@@ -620,6 +640,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5547CB1126E0AAE800B3AF7E /* UseCaseAbstraction */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UseCaseAbstraction;
+		};
+		5547CB1326E0AAEF00B3AF7E /* UseCase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UseCase;
+		};
+		5547CB1526E0AAF500B3AF7E /* RepoAbstraction */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RepoAbstraction;
+		};
+		5547CB1726E0AAF900B3AF7E /* Repo */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Repo;
+		};
 		55B16F2626CF801B00F4AF9F /* Presenter */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Presenter;

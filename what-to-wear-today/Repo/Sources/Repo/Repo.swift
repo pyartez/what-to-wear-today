@@ -1,3 +1,3 @@
-struct Presenter {
+struct Repo {
     var text = "Hello, World!"
 }
