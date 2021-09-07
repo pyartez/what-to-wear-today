@@ -8,6 +8,6 @@
 import Foundation
 import Combine
 
-protocol GetCurrentLocationUseCase {
+public protocol GetCurrentLocationUseCase {
     func invoke() -> AnyPublisher<GPSLocation, Error>
 }

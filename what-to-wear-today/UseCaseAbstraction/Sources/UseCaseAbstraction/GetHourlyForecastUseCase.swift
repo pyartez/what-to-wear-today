@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-enum WeatherSummary {
+public enum WeatherSummary {
     case clear
     case clouds
     case snow
@@ -17,28 +17,28 @@ enum WeatherSummary {
     case thunderstorm
 }
 
-enum TempFormat {
+public enum TempFormat {
     case imperial
     case metric
 }
 
-struct HourlyForecastSummary {
-    let location: String
-    let forecast: [HourlyForecast]
+public struct HourlyForecastSummary {
+    public let location: String
+    public let forecast: [HourlyForecast]
 }
 
-struct HourlyForecast {
-    let date: Date
-    let summary: WeatherSummary
-    let temp: Int
-    let tempFormat: TempFormat
+public struct HourlyForecast {
+    public let date: Date
+    public let summary: WeatherSummary
+    public let temp: Int
+    public let tempFormat: TempFormat
 }
 
-struct GPSLocation {
-    let latitude: Double
-    let longitude: Double
+public struct GPSLocation {
+    public let latitude: Double
+    public let longitude: Double
 }
 
-protocol GetHourlyForecastUseCase {
+public protocol GetHourlyForecastUseCase {
     func invoke(location: GPSLocation) -> AnyPublisher<HourlyForecastSummary, Error>
 }
